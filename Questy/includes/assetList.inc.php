@@ -1,5 +1,6 @@
 <?php
-
+//Arrays med diverse assets til spillet som monstre og våpen.
+//Disse assetsene er classes.
 
 $weaponList = array();
 

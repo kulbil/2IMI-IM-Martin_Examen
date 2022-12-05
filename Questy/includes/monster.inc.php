@@ -1,5 +1,6 @@
 <?php
 
+//monster object
 
 class monster {
 
