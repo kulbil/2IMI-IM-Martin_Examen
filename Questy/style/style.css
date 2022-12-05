@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+}
+
+/*display flex*/
+#wrapper ,#signupBox form ,#signupBox, #loginMethodBox ,#wrapper {
+    display: flex;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginMethodBox {
+    background-color: burlywood;
+    height: 80vh;
+    width: 30vw;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+}
+
+#loginMethodBox a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40%;
+    height: 30%;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 15px;
+    transition: width 0.2s, height 0.2s;
+
+}
+
+#loginButton {
+    background-color: white;
+}
+
+#signupButton {
+    background-color: coral;
+}
+
+
+#loginMethodBox a:hover {
+    background-color: purple;
+    color: white;
+    border: 2px solid white;
+    height: 35%;
+    width: 45%;
+}
+
+#signupBox {
+    justify-content: center;
+    height: 100vh;
+    width: 70vw;
+    background-color: coral;
+}
+
+#signupBox form{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#signupBox form input {
+    flex-direction: column;
+    margin: 2px;
+}
+
+
+#monsterStats ,#monsterName ,#gameWrapper ,#gameSCLeft ,#gameSCRight ,#gameInfoWindow ,#playerItemInfoWindow ,#monsterWindow ,#selectWindow form ,#selectWindow ,#monsterWindowTop ,#monsterWindowBottom ,.selectOption {
+    display: flex;
+}
+
+
+#gameWrapper {
+    display: flex;
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+}
+
+#gameSCLeft {
+    flex: 3;
+    flex-direction: column;
+}
+
+#gameSCRight {
+    flex: 2;
+    flex-direction: column;
+}
+
+#gameInfoWindow {
+    flex: 8;
+    background-color: #3B3B3B;
+    
+}
+
+#playerItemInfoWindow {
+    flex: 3;
+    background-color: #9E9E9E;
+    flex-direction: column;
+    justify-content: space-around;   
+}
+
+#playerItemInfoWindow p {
+    font-size: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+#monsterWindow {
+    width: 100%;
+    height: 100%;
+    flex: 8;
+    flex-direction: column;
+    background-color: #BFFFF9;
+}
+
+#monsterWindowTop {
+    flex: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#monsterName {
+    flex: 2;
+    margin-left: 2vw;
+    align-items: center;
+}
+
+#monsterStats {
+    flex: 1;
+    justify-content: end;
+    align-items: center;
+    margin-right: 2vw;
+}
+
+#monsterWindowBottom {
+    flex: 5;
+    background-color: blue;
+}
+
+#monsterSprite {
+    height: 100px;
+    width: 100px;
+}
+
+#selectWindow {
+    flex: 3;
+    background-color: #949494;
+    align-items: center;
+    justify-content: center;
+}
+
+#selectWindow form {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#selectWindow form button {
+    border: 0px;
+    border-radius: 30vh;
+    height: 32%;
+    width: 40%;
+    background-color: red;
+    font-size: 130%;
+}
