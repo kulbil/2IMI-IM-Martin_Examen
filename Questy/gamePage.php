@@ -57,7 +57,7 @@
         </div>
         <div id="selectWindow">
             <?php
-                //forms som tar inn input fra spilleren og utfører funksjoner etter hva som blir trukker på
+                //forms som tar inn input fra spilleren og utfører funksjoner etter hva som blir trukket på
                 //if statement som skjekker hva som skal bli displayed på knappene (actions eller items)
                 if(isset($_SESSION['select']) && $_SESSION['select'] == "submitItems") {
                     echo '<form action="includes/actionSelect.inc.php" method="GET">';

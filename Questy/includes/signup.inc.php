@@ -5,7 +5,7 @@ if (!isset($_POST['submit'])) {
     header("location: ../signup.php");
     exit();
 } else {
- 
+
     $name = $_POST["name"];
     $uid = $_POST["uid"];
     $pwd = $_POST["pwd"];
