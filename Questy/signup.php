@@ -1,5 +1,9 @@
 <?php
     include_once 'header.php';
+    /* 
+        Form som tar inn input dataen som brukeren skriver inn og sender den til signup.inc.php
+        hvor selve skjekkene vil bli gjort.
+    */
 ?>
 
     <div id="wrapper">

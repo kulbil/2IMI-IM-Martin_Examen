@@ -2,6 +2,7 @@
 include "functions.inc.php";
 session_start();
 
+//henter hvilken 'option' brukeren valgte
 $selectedOption = $_GET['option'];
 
 switch ($selectedOption) {

@@ -1,4 +1,5 @@
 <?php
+//egen side for håndtering av databasetilkobling
 
 $serverName = "localhost";
 $dbUsername = "root";

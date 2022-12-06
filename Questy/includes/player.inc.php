@@ -1,4 +1,7 @@
 <?php
+
+//player object
+
 class player {
 
     public $room;

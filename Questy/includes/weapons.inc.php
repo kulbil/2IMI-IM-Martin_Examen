@@ -1,5 +1,7 @@
 <?php
 
+//weapon class
+
 class weapon {
 
     public $name;

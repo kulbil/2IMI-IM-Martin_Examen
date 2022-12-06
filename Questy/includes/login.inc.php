@@ -1,5 +1,6 @@
 <?php
 
+//Skjekker om det har blitt sendt data fra formen i login pagen.
 if (!isset($_POST['submit'])) {
     header("location: ../login.php");
     exit();
