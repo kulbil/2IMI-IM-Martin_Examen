@@ -238,6 +238,10 @@ function runSubmit() {
     //ikke implementa enda
 }
 
+function itemsSubmit() {
+
+}
+
 //utfører "healing" handlingen som tar opp en healing potion og healer brukeren 50 liv
 function healingSubmit() {
     if(unSerPlayer()->healing > 0) {
