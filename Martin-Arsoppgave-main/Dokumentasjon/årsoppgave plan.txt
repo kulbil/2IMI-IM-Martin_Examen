@@ -1,0 +1,65 @@
+Plan for Årsopppgave:
+
+Frontend-------------------------------------------
+
+	RPG med grafikkelementer (som undertale og omori).
+		GUI elementer:
+		Game Statistics: Health, Strenght, 
+		Enemy health, Enemy Strength.
+
+		Text UI: 
+		Forklaring bak hva som skjer
+		Damage som blir fordelt, items som blir
+		droppa, osv.
+
+	Inventory system
+		Lagring av våpen og dens stats
+		
+	
+
+	Innlogging til en dedikert bruker som lagrer 
+	progress og stats.
+
+	Profilepage hvor man kan se morsomm brukerstats
+	(f.eks. joindate, total spilletid*, game stats). 
+
+	Søke opp andre spillere i databasen og se deres
+	profiler.
+
+----------------------------------------------------
+
+Backend---------------------------------------------
+
+	Hoste database på en egen linux maskin
+	(evt. Hvis det ikke er tid så blir det xampp server).
+
+	Lagring av brukernavn, passord, joindate og stats.
+
+----------------------------------------------------
+
+Ting jeg må øve på----------------------------------
+
+	Syntaxen til php og sql.
+
+	Hvordan man kobler php og javascript til hverandre 
+	og en database.
+
+	Linux oppsett.
+
+	grunnforståelse bak alt LAMP (mest linux og apache).
+
+	Lage et nettverk som kan overføre data fra og til
+	en database mellom 2 maskiner.
+
+-----------------------------------------------------
+	
+	
+	
+
+
+
+
+
+
+
+
