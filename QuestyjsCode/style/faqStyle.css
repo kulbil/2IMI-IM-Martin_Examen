@@ -1,0 +1,168 @@
+body {
+
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 1vh;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1vh lightgrey; 
+}
+ /* Handle */
+::-webkit-scrollbar-thumb {
+    background: white; 
+    opacity: 0.1;
+    border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+}
+
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+#blob {
+    z-index: 0;
+    position: absolute;
+    background-color: white;
+    height: 50vh;
+    aspect-ratio: 1;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(
+        to right,
+        purple,
+        mediumpurple
+    );
+    animation: rotate 10s infinite;
+    filter: blur(15vh);
+}
+
+#faqContainer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+.faqQ {
+    margin: 5vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 40vh;
+    font-size: 3vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    aspect-ratio: 2;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    transition: all 0.5s;
+}
+
+.faqQ:hover {
+    height: 40vh;
+    width: 80vh;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes moveTextQuestion {
+    from {
+        bottom: 27%;
+    }
+    to {
+        bottom: 70%;
+    }
+}
+
+.faqQText {
+    position: absolute;
+}
+
+.faqQ:hover > .faqQText  {
+    animation: moveTextQuestion 0.5s ease-out;
+    bottom: 70%;
+}
+
+@keyframes moveTextAnswer {
+    from {
+        top: 90%;
+        opacity: 0;
+    }
+
+    to {
+        top: 38%;
+        opacity: 1;
+    }
+}
+
+.faqA {
+    position: absolute;
+    width: 70vh;
+    display: none;
+}
+
+.faqQ:hover > .faqA  {
+    animation: moveTextAnswer 0.5s ease-out;
+    display: flex;
+    justify-content: center;
+}
+
+#submitContainer {
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    right: 30px;
+}
+
+#submitContainer p {
+    color: white;
+    font-family: calibri;
+    font-size: 1vw;
+}
+
+#submitContainer input {
+    border-radius: 16px; 
+    height: 10vh;
+    width: 30vh;
+}
+
+#submitContainer button {
+    border-radius: 16px; 
+    height: 4vh;
+    width: 10vw;
+}

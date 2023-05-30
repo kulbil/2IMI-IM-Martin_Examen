@@ -1,0 +1,733 @@
+body {
+    margin: 0;
+}
+
+/*Custom font*/
+@font-face {
+    font-family: 'minecraftiaregular';
+    src: url('../../QuestyjsAssets/webfontkit-20230209-064234/minecraft-webfont.woff2') format('woff2'),
+    url('../../QuestyjsAssets/webfontkit-20230209-064234/minecraft-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*display flex*/
+#adminBackground, #adminContainer, #container, #gameoverBoxContents, #gameoverBox, #signupBox button ,#signupBox form, #signupBox, #loginBox form, #loginBox button, #loginBox, #selectWindow form ,#wrapper ,#signupBox form ,#signupBox, #loginMethodBox ,#wrapper {
+    display: flex;
+}
+
+/*Pixelart*/
+#questyTitle, #gameOverText, #userSearch, #loginBox input, #signupBox input, .deleteBtn ,#adminListContainer, #adminBackground, #userList, #adminContainer, .user, .banned ,#container, #restart, #quit, #gameoverBoxContents, #gameoverBox, #backButton, #signupBox button, #signupBox, #selectWindow, #monsterWindowBottom, #monsterWindowTop, #playerItemInfoWindow, #gameInfoWindow, #loginBox button, #loginBox, #signupButton, #loginButton, #loginMethodBox, #wrapper {
+    image-rendering: pixelated;
+    background-repeat: no-repeat, repeat;
+    background-size: 100% 100%;
+    background-position: center; 
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/VelgMethodBackground.png");
+    align-items: center;
+    justify-content: center;
+}
+
+#loginMethodBox {
+    position: fixed;
+    left: 0;
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/LoginSigninBackground.png");
+    height: 100vh;
+    width: 40vw;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#loginButton {
+    width: 70%;
+    height: 17%;
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Login/LogInButton.png");
+}
+
+#loginButton:hover {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Login/LogInButtonHover.png");
+}
+
+#loginButton:active {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Login/LogInButtonPressed.png");
+}
+
+#signupButton {
+    width: 70%;
+    height: 17%;
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/SignIn/SignInButton.png");
+}
+
+#signupButton:hover {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/SignIn/SignInButtonHover.png");
+}
+
+#signupButton:active {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/SignIn/SignInButtonPressed.png");
+}
+
+#loginBox, #signupBox, #gameoverBox {
+    position: fixed;
+    left: 0;
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/LoginSigninBackground.png");
+    height: 100vh;
+    width: 40vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#loginBox form, #signupBox form {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50vh;
+    width: 70%;
+}
+
+#signupBox form {
+    height: 70vh;
+}
+
+#loginBox input, #signupBox input {
+    height: 8vh;
+    padding: 2vh;
+    font-size: 4vh;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: 'minecraftiaregular';
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/InputField.png");
+
+}
+
+#loginBox button, #signupBox button, #restart, #quit {
+    width: 100%;
+    height: 17vh;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+@keyframes titleSlide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#questyTitle {
+    animation: 1s ease-out 0s 1 titleSlide;
+    height: 30vh;
+    width: 50vw;
+    margin-left: 15vw;
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/QuestyTitle.png");
+}
+
+#loginBox button {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Login/LogInButton.png");
+}
+
+#loginBox button:hover {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Login/LogInButtonHover.png");
+}
+
+#loginBox button:active {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Login/LogInButtonPressed.png");
+}
+
+#signupBox button {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/SignIn/SignInButton.png");
+}
+
+#signupBox button:hover {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/SignIn/SignInButtonHover.png");
+}
+
+#signupBox button:active {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/SignIn/SignInButtonPressed.png");
+}
+
+#backButton {
+    position: fixed;
+    top: 1vw;
+    left: 1vw;
+    height: 6%;
+    width: 3%;
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Return/Return.png");
+}
+
+#backButton:hover {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Return/ReturnHover.png");
+
+}
+
+#backButton:active {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Return/ReturnPressed.png");
+
+}
+
+#faqLink  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    width: 4vw;
+    height: 4vh;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+    border-radius: 5px 5px 0px 0px;
+    transition: background-color 0.2s;
+}
+
+#faqLink:hover {
+    background-color: purple;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../QuestyjsAssets/UI/GameOver/GameOverBackground.png");
+}
+
+#gameoverBox {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+#gameoverBoxContents {
+    height: 60vh;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#gameOverText {
+    height: 15vh;
+    width: 30vw;
+    background-image: url("../../QuestyjsAssets/UI/GameOver/YouDied.png");
+}
+
+#restart {
+    background-image: url("../../QuestyjsAssets/UI/GameOver/GameOverRestart/GameOverRestartButton.png");
+}
+
+#restart:hover  {
+    background-image: url("../../QuestyjsAssets/UI/GameOver/GameOverRestart/GameOverRestartButtonHover.png");
+}
+
+#restart:active  {
+    background-image: url("../../QuestyjsAssets/UI/GameOver/GameOverRestart/GameOverRestartButtonPressed.png");
+}
+
+#quit {
+    background-image: url("../../QuestyjsAssets/UI/GameOver/GameOverQuit/GameOverQuitButton.png");
+}
+
+#quit:hover {
+    background-image: url("../../QuestyjsAssets/UI/GameOver/GameOverQuit/GameOverQuitButtonHover.png");
+}
+
+#quit:active {
+    background-image: url("../../QuestyjsAssets/UI/GameOver/GameOverQuit/GameOverQuitButtonPressed.png");
+}
+
+
+
+#monsterStats ,#monsterName ,#gameWrapper ,#gameSCLeft ,#gameSCRight ,#gameInfoWindow ,#playerItemInfoWindow ,#monsterWindow ,#selectWindow form ,#selectWindow ,#monsterWindowTop ,#monsterWindowBottom ,.selectOption {
+    display: flex;
+}
+
+
+#gameWrapper {
+    display: flex;
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+}
+
+#gameSCLeft {
+    flex: 3;
+    flex-direction: column;
+}
+
+#gameSCRight {
+    flex: 2;
+    flex-direction: column;
+}
+
+#gameInfoWindow {
+    flex: 8;
+    flex-direction: column;
+    overflow: auto;
+    background-color: #3B3B3B;
+    font-family: 'minecraftiaregular';
+    font-size: 2vh;
+    color: white;
+    padding-left: 3vw;
+    background-image: url("../../QuestyjsAssets/UI/Backgrounds/GameInfoView.png");
+}
+
+.addedInfo {
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+#playerItemInfoWindow {
+    flex: 3;
+    background-color: #9E9E9E;
+    background-image: url("../../QuestyjsAssets/UI/Backgrounds/ItenInfoView.png");
+}
+
+#playerInfo {
+    display: flex;
+    flex: 7;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#hpPIIWDiv {
+    display: flex;
+}
+
+#hpPIIWDiv p {
+    flex: 2;
+}
+
+#hpBarPIIW {
+    flex: 5;
+    background-color: red;
+    border: 3px solid;
+    height: 100%;
+    width: 70%;
+}
+#hpBarBarPIIW {
+    background-color: lightgreen;
+    height: 100%;
+}
+
+#itemInfo {
+    display: flex;
+    flex: 3;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#playerItemInfoWindow p {
+    font-size: 3vh;
+    font-family: 'minecraftiaregular';
+    margin: 0;
+    margin-left: 2vw;
+}
+
+#monsterWindow {
+    width: 100%;
+    height: 100%;
+    flex: 8;
+    flex-direction: column;
+    background-color: #BFFFF9;
+}
+
+#monsterWindowTop {
+    flex: 1;
+    font-size: 2vh;
+    font-family: 'minecraftiaregular';
+    background-image: url("../../QuestyjsAssets/UI/Backgrounds/MonsterWindowTop.png");
+}
+
+#monsterName {
+    flex: 2;
+    margin-left: 2vw;
+    align-items: center;
+}
+
+#monsterStats {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    margin-right: 2vw;
+}
+
+
+#monsterWindowBottom {
+    flex: 5;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    background-image: url("../../QuestyjsAssets/UI/Backgrounds/MonsterView.png");
+}
+
+#monsterSprite {
+    position: absolute;
+    height: 40vh;
+    width: 20vw;
+    z-index: 1;
+}
+
+#monsterPlatform {
+    position: relative;
+    height: 25%;
+    width: 50%;
+    top: 30%;
+}
+
+#selectWindow {
+    flex: 3;
+    display: flex;
+    background-color: #949494;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../QuestyjsAssets/UI/Backgrounds/SelectView.png");
+}
+
+#selectWindow button {
+    background-color: #ba8044;
+    border: 0px;
+    height: 40%;
+    width: 40%;
+    font-size: 130%;
+}
+
+.menuButton {
+    background-repeat: no-repeat, repeat;
+    background-size: 73%;
+    background-position: center;
+    height: 100%;
+} 
+
+/*Fight Button-----------------------------------------------------------------------------------*/
+#fightBut {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Fight/FightBut.png");
+}
+#fightBut:hover {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Fight/FightButHover.png");
+}
+#fightBut:active {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Fight/FightButPressed.png");
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*Run Button-------------------------------------------------------------------------------------*/
+#runBut {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Run/RunBut.png");
+}
+#runBut:hover {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Run/RunButHover.png");
+    
+}
+#runBut:active {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Run/RunButPressed.png");
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*Items Button-----------------------------------------------------------------------------------*/
+#itemsBut {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Items/ItemsBut.png");
+}
+#itemsBut:hover {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Items/ItemsButHover.png");
+    
+}
+#itemsBut:active {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Items/ItemsButPressed.png");
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*Quit Button-----------------------------------------------------------------------------------*/
+#quitBut {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Quit/QuitBut.png");
+}
+#quitBut:hover {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Quit/QuitButHover.png");
+    
+}
+#quitBut:active {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Quit/QuitButPressed.png");
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*Healing Button---------------------------------------------------------------------------------*/
+#healingBut {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Healing/HealingBut.png");
+}
+#healingBut:hover {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Healing/HealingtButHover.png");
+    
+}
+#healingBut:active {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Healing/HealingButPressed.png");
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*Zeus Button-----------------------------------------------------------------------------------/*/
+#zeusBut {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Zeus/ZeusBut.png");
+}
+#zeusBut:hover {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Zeus/ZeusButHover.png");
+    
+}
+#zeusBut:active {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Zeus/ZeusButPressed.png");
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*Strength Button--------------------------------------------------------------------------------*/
+#strengthBut {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Strength/StrengthBut.png");
+}
+#strengthBut:hover {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Strength/StrengthButHover.png");
+    
+}
+#strengthBut:active {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Strength/StrengthButPressed.png");
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*Back Button------------------------------------------------------------------------------------*/
+#backBut {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Back/BackBut.png");
+}
+#backBut:hover {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Back/BackButHover.png");
+}
+#backBut:active {
+    background-image: url("../../QuestyjsAssets/UI/SelectVewButtons/Back/BackButPressed.png");
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*FAQ--------------------------------------------------------------------------------------------*/
+
+#faqContainer {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+
+.faqQuestion {
+    position: relative;
+    left: 10vw;
+    display: flex;
+    height: 10vh;
+    width: 20vw;
+}
+
+#faqQ1 {
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    z-index: 2;
+    border-radius: 2vh;
+}
+
+#faqA1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 1vh;
+    left: 1vh;
+    border-radius: 2vh;
+    background-color: blue;
+    z-index: 1;
+    transition: left 0.5s ease-in;
+}
+
+.faqQuestion1 p {
+    font-family: calibri;
+}
+
+@keyframes questionHover {
+    0% {
+        left: 1vh;
+    }
+    10% {
+        left: -2vh;
+    }
+    100% {
+        left: 60vh;
+    }
+}
+
+.faqQuestion:hover #faqA1 {
+    animation: 0.5s ease-in 0s 1 questionHover;
+    background-color: green;
+    left: 60vh;
+}
+
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*Admin------------------------------------------------------------------------------------------*/
+
+#adminContainer {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/VelgMethodBackground.png");
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-60%);
+    }
+    100% {
+        transform: translateX(-30%);
+    }
+}
+
+#adminBackground {
+    animation: 0.5s ease-out 0s 1 slideIn;
+    transform: translateX(-30%);
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/AdminListBackground.png");
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 100vh;
+    padding: 2vh;
+}
+
+#adminListContainer {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/AdminBackgroundListList.png");
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60vw;
+    height: 75vh;
+}
+
+#userSearch {
+    margin: auto;
+    height: 8vh;
+    padding: 2vh;
+    font-size: 4vh;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: 'minecraftiaregular';
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/InputField.png");
+
+}
+
+#userList {
+    width: 60vw;
+    height: 70vh;
+    padding: 2vh;
+    overflow: auto;
+}
+
+#dbTable {
+    table-layout: fixed;
+    width: 100%;
+    color: white;
+    font-family: 'minecraftiaregular';
+    font-size: 2vh;
+}
+
+#dbTable th {
+    color: white;
+    font-family: 'minecraftiaregular';
+    font-size: 2.4vh;
+}
+
+#dbTable td {
+    color: white;
+    font-family: 'minecraftiaregular';
+    font-size: 2vh;
+    width: 5vw;
+}
+
+.banned, .user {
+    background-color: transparent;
+    border: 0px;
+    height: 5vh;
+    width: 5vw;
+    font-size: 130%;
+}
+
+.deleteBtn {
+    background-color: transparent;
+    border: 0px;
+    height: 5vh;
+    width: 6.5vw;
+    font-size: 130%;
+}
+
+
+
+/*Ban Button-------------------------------------------------------------------------------------*/
+
+.user {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Ban/BanBut.png")
+}
+
+.user:hover {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Ban/BanButHover.png")    
+}
+
+.user:active {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/Ban/BanButPressed.png")    
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/*UnBan Button-----------------------------------------------------------------------------------*/
+
+.banned {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/UnBan/UnBanBut.png")
+}
+
+.banned:hover {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/UnBan/UnBanButHover.png")    
+}
+
+.banned:active {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/UnBan/UnBanButPressed.png")    
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/*Delete Button----------------------------------------------------------------------------------*/
+
+.deleteBtn {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/delete/deleteBut.png")
+}
+
+.deleteBtn:hover {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/delete/deleteButHover.png")    
+}
+
+.deleteBtn:active {
+    background-image: url("../../QuestyjsAssets/UI/BeforeGamePage/delete/deleteButPressed.png")    
+}
+
+/*-----------------------------------------------------------------------------------------------*/
