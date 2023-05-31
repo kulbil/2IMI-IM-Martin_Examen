@@ -34,7 +34,8 @@ CREATE TABLE `users` (
   `userpwd` varchar(128) NOT NULL,
   `playerdata` varchar(256) NOT NULL,
   `highscore` int(11) NOT NULL,
-  `joindate` datetime NOT NULL
+  `joindate` datetime NOT NULL,
+  'rank' int(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
