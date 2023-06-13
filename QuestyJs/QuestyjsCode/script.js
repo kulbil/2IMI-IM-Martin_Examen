@@ -288,3 +288,12 @@ $("#selectWindow").on('click', '#backBut', function() {
 
 
 //------------------------------------------------------------------------
+
+//FAQ---------------------------------------------------------------------
+const blobEl = document.getElementById("blob");
+
+    blobEl.animate({
+        left: clientX + "px",
+        top: clientY + "px"
+    }, {duration: 3000, fill: "forwards"})
+//------------------------------------------------------------------------
